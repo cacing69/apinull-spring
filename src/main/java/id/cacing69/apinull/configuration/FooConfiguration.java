@@ -1,4 +1,4 @@
-package id.cacing69.apinull;
+package id.cacing69.apinull.configuration;
 
 import id.cacing69.apinull.data.Foo;
 import org.springframework.context.annotation.Bean;
