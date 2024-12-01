@@ -1,5 +1,6 @@
 package id.cacing69.apinull;
 
+import id.cacing69.apinull.repository.ProdukRepository;
 import id.cacing69.apinull.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,5 +23,13 @@ public class ComponentConfigurationTest {
         ProductService productService2 = applicationContext.getBean("productService" ,ProductService.class);
 
         Assertions.assertSame(productService1, productService2);
+    }
+
+    @Test
+    void testConstructorDependencyInjection(){
+        ProductService productService = applicationContext.getBean(ProductService.class);
+        ProdukRepository produkRepository = applicationContext.getBean(ProdukRepository.class);
+
+        Assertions.assertSame(productService.getProdukRepository(), produkRepository);
     }
 }

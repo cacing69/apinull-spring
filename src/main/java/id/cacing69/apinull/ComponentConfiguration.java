@@ -6,7 +6,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(
         basePackages = {
-                "id.cacing69.apinull.service"
+                "id.cacing69.apinull.repository",
+                "id.cacing69.apinull.service",
         }
 )
 public class ComponentConfiguration {
